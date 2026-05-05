@@ -53,7 +53,28 @@ public class App {
                     }
                     break;
                 case 3:
-                    // todo(víctor): liberar un asiento
+                    System.out.print("Seleccione en que fila: ");
+                    fila = sc.nextInt();
+                    while (fila < 1 || fila > 5) {
+                        System.out.print("Seleccione una fila válida: ");
+                        fila = sc.nextInt();
+                    }
+                    System.out.print("Seleccione en que asiento: ");
+                    columna = sc.nextInt();
+                    while (columna < 1 || columna > 8) {
+                        System.out.print("Seleccione un asiento válido: ");
+                        columna = sc.nextInt();
+                    }
+                    for (int i = 0; i < sala.length; i++) {
+                        for (int j = 0; j < sala[i].length; j++) {
+                            if (fila - 1 == i && columna - 1 == j && sala[i][j] != 'O') {
+                                sala[i][j] = 'O';
+                            }
+                            if (fila - 1 == i && columna - 1 == j && sala[i][j] == 'O') {
+                                System.out.println("Ese asiento ya esta libre");
+                            }
+                        }
+                    }
                     break;
                 case 4:
                     // todo(ferran): mostrar disponibilidad
