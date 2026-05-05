@@ -2,7 +2,13 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        // todo(ferran): crear una sala de cine con 5 filas y 8 columnas
+    
+        char[][] sala = new char[5][8];       
+        for (int i = 0; i < sala.length; i++) {
+            for (int j = 0; j < sala[i].length; j++) {
+                sala[i][j]='O';
+            }
+        }  
 
         Scanner sc = new Scanner(System.in);     
         int opcion = 0;
