@@ -26,7 +26,13 @@ public class App {
             }
             switch (opcion) {
                 case 1:
-                    // todo(guillermo): mostrar la sala de cine
+                    for (int i = 0; i < sala.length; i++) {
+                        System.out.print("Fila " + (i + 1) + ": ");
+                        for (int j = 0; j < sala[i].length; j++) {
+                            System.out.print(sala[i][j] + "  ");
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 2:
                     System.out.print("Seleccione en que fila: ");
